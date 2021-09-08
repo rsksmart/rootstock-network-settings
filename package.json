@@ -2,7 +2,7 @@
   "name": "rsk-network-upgrades",
   "version": "1.1.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "nyc mocha tests/*",
     "build": "rm -r dist & tsc",
@@ -13,6 +13,7 @@
   "files": [
     "dist/**/*"
   ],
+  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rsksmart/rsk-network-upgrades.git"
