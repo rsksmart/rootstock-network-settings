@@ -1,5 +1,5 @@
 export enum NETWORKS {
-  REGTEST,
-  TESTNET,
-  MAINNET,
+  REGTEST = 'regtest',
+  TESTNET = 'testnet',
+  MAINNET = 'mainnet'
 }
