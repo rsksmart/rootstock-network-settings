@@ -2,7 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Regtest = void 0;
 class Regtest {
-    getActivationHeight(networkUpgrade) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    getActivationHeight(_networkUpgrade) {
         return 0;
     }
 }
