@@ -1,17 +1,17 @@
-import { NetworkUpgradesActivationHeights } from './network-activation-heights';
+import { NetworkUpgradesActivationHeights } from './network-upgrades-activation-heights';
 import { NetworkUpgrades } from '../enums/network-upgrades';
 
-export class Testnet implements NetworkUpgradesActivationHeights {
+export class MainnetActivationHeights implements NetworkUpgradesActivationHeights {
   getActivationHeight(networkUpgrade: NetworkUpgrades): number {
     switch (networkUpgrade) {
       case NetworkUpgrades.orchid:
-        return 0;
+        return 1052700;
       case NetworkUpgrades.wasabi:
-        return 0;
+        return 1591000;
       case NetworkUpgrades.papyrus:
-        return 863000;
+        return 2392700;
       case NetworkUpgrades.iris:
-        return 2060500;
+        return 3614800;
     }
   }
 }

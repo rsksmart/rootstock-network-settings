@@ -1,0 +1,1 @@
+{"version":3,"file":"testnet-erp-details.js","sourceRoot":"","sources":["../../src/erp-details/testnet-erp-details.ts"],"names":[],"mappings":";;;AAEA,MAAa,iBAAiB;IAC5B,gBAAgB;QACd,OAAO;YACH,oEAAoE;YACpE,oEAAoE;YACpE,oEAAoE;SACvE,CAAC;IACJ,CAAC;IAED,WAAW;QACT,OAAO,MAAM,CAAC,CAAC,gBAAgB;IACjC,CAAC;CACF;AAZD,8CAYC"}

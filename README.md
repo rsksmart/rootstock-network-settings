@@ -1,6 +1,6 @@
-# rsk-network-upgrades
+# rsk-network-settings
 
-This library exposes the Network upgrades activation heights for the different networks.
+This library exposes the Network settings for the different networks. This includes network upgrades activation heights, and ERP federation details.
 
 ## Requirements
 
@@ -16,6 +16,8 @@ npm run pack
 Once you do this you can use it as the sample shows in [here](samples/sample.js).
 
 ## Details
+
+## Network upgrades activation heights
 
 The library builds a js object with the definition of the height of each existing network upgrade.
 
@@ -75,4 +77,54 @@ e.g.
         iris: 4,
     };
     getCustomActivationHeights(activationConfig).getActivationHeight(NetworkUpgrades.papyrus) => 3
+```
+
+## ERP federation details
+
+The library builds a js object with the details of the ERP federation of the given network.
+
+### Networks
+
+```
+{
+    REGTEST,
+    TESTNET,
+    MAINNET,
+}
+```
+
+### ErpDetails
+
+This class exposes a method to get the erp federation public keys, and another method to get the CSV value.
+```
+function getErpPublicKeys(): Array<string>
+function getCsvValue(): string
+```
+
+### getErpDetailsForThisNetwork
+
+```
+function getErpDetailsForThisNetwork(network: NETWORKS): ErpDetails
+```
+
+e.g.
+```
+    getErpDetailsForThisNetwork(NETWORKS.REGTEST).getErpPublicKeys() => ['0x0', '0x1', '0x2']
+```
+
+### getCustomErpDetails
+
+```
+function getCustomErpDetails(customDetails: CustomDetails): ErpDetails
+```
+
+This method allows to create a custom erp details object (useful for testing and/or private networks).
+
+e.g.
+```
+    let customDetails = {
+        erpPublicKeys: ['0x0', '0x1'],
+        csvValue: '90'
+    };
+    getCustomErpDetails(customDetails).getCsvValue(NetworkUpgrades.papyrus) => '90'
 ```

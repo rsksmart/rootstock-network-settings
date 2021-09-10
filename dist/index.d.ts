@@ -1,5 +1,9 @@
-import { ActivationHeights } from './activation-heights/custom';
-import { NetworkUpgradesActivationHeights } from './activation-heights/network-activation-heights';
 import { NETWORKS } from './enums/networks';
+import { NetworkUpgradesActivationHeights } from './activation-heights/network-upgrades-activation-heights';
+import { ActivationHeights } from './activation-heights/custom-activation-heights';
+import { ErpDetails } from './erp-details/erp-details';
+import { CustomDetails } from './erp-details/custom-erp-details';
 export declare function getActivationHeightsForThisNetwork(network: NETWORKS): NetworkUpgradesActivationHeights;
 export declare function getCustomActivationHeights(activationHeights: ActivationHeights): NetworkUpgradesActivationHeights;
+export declare function getErpDetailsForThisNetwork(network: NETWORKS): ErpDetails;
+export declare function getCustomErpDetails(customDetails: CustomDetails): ErpDetails;
