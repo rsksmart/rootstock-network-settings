@@ -1,21 +1,21 @@
-import { ActivationHeights, Custom } from './activation-heights/custom';
-import { Mainnet } from './activation-heights/mainnet';
-import { NetworkUpgradesActivationHeights } from './activation-heights/network-activation-heights';
+import { ActivationHeights, CustomActivationHeights } from './activation-heights/custom-activation-heights';
+import { MainnetActivationHeights } from './activation-heights/mainnet-activation-heights';
+import { NetworkUpgradesActivationHeights } from './activation-heights/network-upgrades-activation-heights';
 import { NETWORKS } from './enums/networks';
-import { Regtest } from './activation-heights/regtest';
-import { Testnet } from './activation-heights/testnet';
+import { RegtestActivationHeights } from './activation-heights/regtest-activation-heights';
+import { TestnetActivationHeights } from './activation-heights/testnet-activation-heights';
 
 export function getActivationHeightsForThisNetwork(network: NETWORKS): NetworkUpgradesActivationHeights {
   switch (network) {
     case NETWORKS.REGTEST:
-      return new Regtest();
+      return new RegtestActivationHeights();
     case NETWORKS.TESTNET:
-      return new Testnet();
+      return new TestnetActivationHeights();
     case NETWORKS.MAINNET:
-      return new Mainnet();
+      return new MainnetActivationHeights();
   }
 }
 
 export function getCustomActivationHeights(activationHeights: ActivationHeights): NetworkUpgradesActivationHeights {
-  return new Custom(activationHeights);
+  return new CustomActivationHeights(activationHeights);
 }

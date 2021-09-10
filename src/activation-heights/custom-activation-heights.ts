@@ -1,4 +1,4 @@
-import { NetworkUpgradesActivationHeights } from './network-activation-heights';
+import { NetworkUpgradesActivationHeights } from './network-upgrades-activation-heights';
 import { NetworkUpgrades } from '../enums/network-upgrades';
 
 export type ActivationHeights = {
@@ -8,7 +8,7 @@ export type ActivationHeights = {
   iris: number;
 };
 
-export class Custom implements NetworkUpgradesActivationHeights {
+export class CustomActivationHeights implements NetworkUpgradesActivationHeights {
   private activationHeights: ActivationHeights;
   constructor(activationHeights: ActivationHeights) {
     this.activationHeights = activationHeights;

@@ -1,6 +1,6 @@
-# rsk-network-upgrades
+# rsk-network-settings
 
-This library exposes the Network upgrades activation heights for the different networks.
+This library exposes the Network settings for the different networks. This includes network upgrades activation heights, and ERP federation details.
 
 ## Requirements
 

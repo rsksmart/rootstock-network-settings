@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Custom = void 0;
+exports.CustomActivationHeights = void 0;
 const network_upgrades_1 = require("../enums/network-upgrades");
-class Custom {
+class CustomActivationHeights {
     constructor(activationHeights) {
         this.activationHeights = activationHeights;
     }
@@ -19,5 +19,5 @@ class Custom {
         }
     }
 }
-exports.Custom = Custom;
-//# sourceMappingURL=custom.js.map
+exports.CustomActivationHeights = CustomActivationHeights;
+//# sourceMappingURL=custom-activation-heights.js.map

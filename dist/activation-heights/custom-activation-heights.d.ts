@@ -1,4 +1,4 @@
-import { NetworkUpgradesActivationHeights } from './network-activation-heights';
+import { NetworkUpgradesActivationHeights } from './network-upgrades-activation-heights';
 import { NetworkUpgrades } from '../enums/network-upgrades';
 export declare type ActivationHeights = {
     orchid: number;
@@ -6,7 +6,7 @@ export declare type ActivationHeights = {
     papyrus: number;
     iris: number;
 };
-export declare class Custom implements NetworkUpgradesActivationHeights {
+export declare class CustomActivationHeights implements NetworkUpgradesActivationHeights {
     private activationHeights;
     constructor(activationHeights: ActivationHeights);
     getActivationHeight(networkUpgrade: NetworkUpgrades): number;

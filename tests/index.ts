@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { getActivationHeightsForThisNetwork, getCustomActivationHeights } from "../src";
-import { ActivationHeights } from "../src/activation-heights/custom";
+import { ActivationHeights } from "../src/activation-heights/custom-activation-heights";
 import { NetworkUpgrades } from "../src/enums/network-upgrades";
 import { NETWORKS } from "../src/enums/networks";
 
