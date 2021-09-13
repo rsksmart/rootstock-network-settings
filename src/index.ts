@@ -9,6 +9,7 @@ import { RegtestErpDetails } from './erp-details/regtest-erp-details';
 import { TestnetErpDetails } from './erp-details/testnet-erp-details';
 import { MainnetErpDetails } from './erp-details/mainnet-erp-details';
 import { CustomErpDetails, CustomDetails } from './erp-details/custom-erp-details';
+import { NetworkSettings } from './network-settings';
 
 export function getActivationHeightsForThisNetwork(network: NETWORKS): NetworkUpgradesActivationHeights {
   switch (network) {
@@ -34,8 +35,15 @@ export function getErpDetailsForThisNetwork(network: NETWORKS): ErpDetails {
       case NETWORKS.MAINNET:
         return new MainnetErpDetails();
     }
-  }
+}
   
-  export function getCustomErpDetails(customDetails: CustomDetails): ErpDetails {
+export function getCustomErpDetails(customDetails: CustomDetails): ErpDetails {
     return new CustomErpDetails(customDetails);
-  }
+}
+
+export function getNetworkSettingsForThisNetwork(network: NETWORKS): NetworkSettings {
+    const networkUpgradesActivationHeights = getActivationHeightsForThisNetwork(network);
+    const erpDetails = getErpDetailsForThisNetwork(network);
+
+    return new NetworkSettings(networkUpgradesActivationHeights, erpDetails);
+}
