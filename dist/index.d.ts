@@ -3,7 +3,9 @@ import { NetworkUpgradesActivationHeights } from './activation-heights/network-u
 import { ActivationHeights } from './activation-heights/custom-activation-heights';
 import { ErpDetails } from './erp-details/erp-details';
 import { CustomDetails } from './erp-details/custom-erp-details';
+import { NetworkSettings } from './network-settings';
 export declare function getActivationHeightsForThisNetwork(network: NETWORKS): NetworkUpgradesActivationHeights;
 export declare function getCustomActivationHeights(activationHeights: ActivationHeights): NetworkUpgradesActivationHeights;
 export declare function getErpDetailsForThisNetwork(network: NETWORKS): ErpDetails;
 export declare function getCustomErpDetails(customDetails: CustomDetails): ErpDetails;
+export declare function getNetworkSettingsForThisNetwork(network: NETWORKS): NetworkSettings;

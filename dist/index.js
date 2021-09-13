@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getCustomErpDetails = exports.getErpDetailsForThisNetwork = exports.getCustomActivationHeights = exports.getActivationHeightsForThisNetwork = void 0;
+exports.getNetworkSettingsForThisNetwork = exports.getCustomErpDetails = exports.getErpDetailsForThisNetwork = exports.getCustomActivationHeights = exports.getActivationHeightsForThisNetwork = void 0;
 const networks_1 = require("./enums/networks");
 const mainnet_activation_heights_1 = require("./activation-heights/mainnet-activation-heights");
 const testnet_activation_heights_1 = require("./activation-heights/testnet-activation-heights");
@@ -10,6 +10,7 @@ const regtest_erp_details_1 = require("./erp-details/regtest-erp-details");
 const testnet_erp_details_1 = require("./erp-details/testnet-erp-details");
 const mainnet_erp_details_1 = require("./erp-details/mainnet-erp-details");
 const custom_erp_details_1 = require("./erp-details/custom-erp-details");
+const network_settings_1 = require("./network-settings");
 function getActivationHeightsForThisNetwork(network) {
     switch (network) {
         case networks_1.NETWORKS.REGTEST:
@@ -40,4 +41,10 @@ function getCustomErpDetails(customDetails) {
     return new custom_erp_details_1.CustomErpDetails(customDetails);
 }
 exports.getCustomErpDetails = getCustomErpDetails;
+function getNetworkSettingsForThisNetwork(network) {
+    const networkUpgradesActivationHeights = getActivationHeightsForThisNetwork(network);
+    const erpDetails = getErpDetailsForThisNetwork(network);
+    return new network_settings_1.NetworkSettings(networkUpgradesActivationHeights, erpDetails);
+}
+exports.getNetworkSettingsForThisNetwork = getNetworkSettingsForThisNetwork;
 //# sourceMappingURL=index.js.map

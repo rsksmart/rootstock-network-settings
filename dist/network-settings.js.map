@@ -1,0 +1,1 @@
+{"version":3,"file":"network-settings.js","sourceRoot":"","sources":["../src/network-settings.ts"],"names":[],"mappings":";;;AAGA,MAAa,eAAe;IAYxB,YAAY,iCAAmE,EAAE,WAAuB;QACpG,IAAI,CAAC,gCAAgC,GAAG,iCAAiC,CAAC;QAC1E,IAAI,CAAC,UAAU,GAAG,WAAW,CAAC;IAClC,CAAC;IAXD,mCAAmC;QAC/B,OAAO,IAAI,CAAC,gCAAgC,CAAC;IACjD,CAAC;IAED,aAAa;QACT,OAAO,IAAI,CAAC,UAAU,CAAC;IAC3B,CAAC;CAMJ;AAhBD,0CAgBC"}
