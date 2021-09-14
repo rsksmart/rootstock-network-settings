@@ -9,9 +9,9 @@ export class CustomErpDetails implements ErpDetails {
   private customDetails: CustomDetails;
 
   constructor(_customDetails: CustomDetails) {
-      this.customDetails = _customDetails;
+    this.customDetails = _customDetails;
   }
-  
+
   getErpPublicKeys(): Array<string> {
     return this.customDetails.erpPublicKeys;
   }

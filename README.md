@@ -1,3 +1,7 @@
+# Disclaimer
+
+This is a beta version until audited by the security team. Any comments or suggestions feel free to contribute or reach out at our [open slack](https://developers.rsk.co/slack).
+
 # rsk-network-settings
 
 This library exposes the Network settings for the different networks. This includes network upgrades activation heights, and ERP federation details.
@@ -10,16 +14,18 @@ As a regular npm library it requires node and npm.
 
 Build the library running
 ```
+npm i
 npm run pack
 ```
 
+## Run Sample Code
+
 Once you do this you can use it as the sample shows in [here](samples/sample.js).
+```
+node sample/sample.js
+```
 
 ## Details
-
-## Network upgrades activation heights
-
-The library builds a js object with the definition of the height of each existing network upgrade.
 
 ### ActivationHeights
 
@@ -41,6 +47,19 @@ The library builds a js object with the definition of the height of each existin
     MAINNET,
 }
 ```
+
+## Network settings
+
+The library returns a class with methods to get the different network settings for a given network.
+
+```
+function getNetworkSettingsForThisNetwork(network: NETWORKS): NetworkSettings
+```
+
+## Network upgrades activation heights
+
+The library builds a js object with the definition of the height of each existing network upgrade.
+
 
 ### NetworkUpgradesActivationHeights
 
@@ -82,16 +101,6 @@ e.g.
 ## ERP federation details
 
 The library builds a js object with the details of the ERP federation of the given network.
-
-### Networks
-
-```
-{
-    REGTEST,
-    TESTNET,
-    MAINNET,
-}
-```
 
 ### ErpDetails
 

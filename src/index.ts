@@ -27,23 +27,23 @@ export function getCustomActivationHeights(activationHeights: ActivationHeights)
 }
 
 export function getErpDetailsForThisNetwork(network: NETWORKS): ErpDetails {
-    switch (network) {
-      case NETWORKS.REGTEST:
-        return new RegtestErpDetails();
-      case NETWORKS.TESTNET:
-        return new TestnetErpDetails();
-      case NETWORKS.MAINNET:
-        return new MainnetErpDetails();
-    }
+  switch (network) {
+    case NETWORKS.REGTEST:
+      return new RegtestErpDetails();
+    case NETWORKS.TESTNET:
+      return new TestnetErpDetails();
+    case NETWORKS.MAINNET:
+      return new MainnetErpDetails();
+  }
 }
-  
+
 export function getCustomErpDetails(customDetails: CustomDetails): ErpDetails {
-    return new CustomErpDetails(customDetails);
+  return new CustomErpDetails(customDetails);
 }
 
 export function getNetworkSettingsForThisNetwork(network: NETWORKS): NetworkSettings {
-    const networkUpgradesActivationHeights = getActivationHeightsForThisNetwork(network);
-    const erpDetails = getErpDetailsForThisNetwork(network);
+  const networkUpgradesActivationHeights = getActivationHeightsForThisNetwork(network);
+  const erpDetails = getErpDetailsForThisNetwork(network);
 
-    return new NetworkSettings(networkUpgradesActivationHeights, erpDetails);
+  return new NetworkSettings(networkUpgradesActivationHeights, erpDetails);
 }
