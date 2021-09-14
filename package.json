@@ -1,11 +1,11 @@
 {
   "name": "rsk-network-settings",
-  "version": "1.2.0",
+  "version": "0.2.0-beta",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "test": "nyc mocha tests/*",
-    "build": "rm -r dist & tsc",
+    "build": "rm -rf dist & tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint 'src/**/*'",
     "pack": "npm run test & npm run lint & npm run format & npm run build"
