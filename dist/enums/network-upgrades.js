@@ -7,5 +7,6 @@ var NetworkUpgrades;
     NetworkUpgrades["wasabi"] = "wasabi";
     NetworkUpgrades["papyrus"] = "papyrus";
     NetworkUpgrades["iris"] = "iris";
+    NetworkUpgrades["hop"] = "hop";
 })(NetworkUpgrades = exports.NetworkUpgrades || (exports.NetworkUpgrades = {}));
 //# sourceMappingURL=network-upgrades.js.map

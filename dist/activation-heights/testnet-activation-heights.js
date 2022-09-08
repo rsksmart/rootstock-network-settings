@@ -13,6 +13,8 @@ class TestnetActivationHeights {
                 return 863000;
             case network_upgrades_1.NetworkUpgrades.iris:
                 return 2060500;
+            case network_upgrades_1.NetworkUpgrades.hop:
+                return 3103000;
         }
     }
 }

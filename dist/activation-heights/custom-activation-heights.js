@@ -16,6 +16,8 @@ class CustomActivationHeights {
                 return this.activationHeights.papyrus;
             case network_upgrades_1.NetworkUpgrades.iris:
                 return this.activationHeights.iris;
+            case network_upgrades_1.NetworkUpgrades.hop:
+                return this.activationHeights.hop;
         }
     }
 }

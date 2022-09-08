@@ -5,6 +5,7 @@ export declare type ActivationHeights = {
     wasabi: number;
     papyrus: number;
     iris: number;
+    hop: number;
 };
 export declare class CustomActivationHeights implements NetworkUpgradesActivationHeights {
     private activationHeights;
