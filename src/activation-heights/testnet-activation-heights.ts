@@ -12,6 +12,8 @@ export class TestnetActivationHeights implements NetworkUpgradesActivationHeight
         return 863000;
       case NetworkUpgrades.iris:
         return 2060500;
+      case NetworkUpgrades.hop:
+        return 3103000;
     }
   }
 }
