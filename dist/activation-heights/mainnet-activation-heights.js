@@ -13,6 +13,8 @@ class MainnetActivationHeights {
                 return 2392700;
             case network_upgrades_1.NetworkUpgrades.iris:
                 return 3614800;
+            case network_upgrades_1.NetworkUpgrades.hop:
+                return 4598500;
         }
     }
 }

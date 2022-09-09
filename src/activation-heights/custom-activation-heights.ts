@@ -6,6 +6,7 @@ export type ActivationHeights = {
   wasabi: number;
   papyrus: number;
   iris: number;
+  hop: number;
 };
 
 export class CustomActivationHeights implements NetworkUpgradesActivationHeights {
@@ -24,6 +25,8 @@ export class CustomActivationHeights implements NetworkUpgradesActivationHeights
         return this.activationHeights.papyrus;
       case NetworkUpgrades.iris:
         return this.activationHeights.iris;
+      case NetworkUpgrades.hop:
+        return this.activationHeights.hop;
     }
   }
 }

@@ -18,5 +18,6 @@ logActivation(NetworkUpgrades.orchid);
 logActivation(NetworkUpgrades.wasabi);
 logActivation(NetworkUpgrades.papyrus);
 logActivation(NetworkUpgrades.iris);
+logActivation(NetworkUpgrades.hop);
 
 logErpDetails();

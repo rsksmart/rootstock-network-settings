@@ -13,6 +13,7 @@ describe('Network Upgrades activation heights', () => {
             expect(activationHeights.getActivationHeight(NetworkUpgrades.wasabi)).to.be.eq(0);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(0);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.iris)).to.be.eq(0);
+            expect(activationHeights.getActivationHeight(NetworkUpgrades.hop)).to.be.eq(0);
         });
 
         it('Gets testnet activation heights', () => {
@@ -21,6 +22,7 @@ describe('Network Upgrades activation heights', () => {
             expect(activationHeights.getActivationHeight(NetworkUpgrades.wasabi)).to.be.eq(0);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(863000);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.iris)).to.be.eq(2060500);
+            expect(activationHeights.getActivationHeight(NetworkUpgrades.hop)).to.be.eq(3103000);
         });
 
         it('Gets mainnet activation heights', () => {
@@ -29,6 +31,7 @@ describe('Network Upgrades activation heights', () => {
             expect(activationHeights.getActivationHeight(NetworkUpgrades.wasabi)).to.be.eq(1591000);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(2392700);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.iris)).to.be.eq(3614800);
+            expect(activationHeights.getActivationHeight(NetworkUpgrades.hop)).to.be.eq(4598500);
         });
     });
 
@@ -39,6 +42,7 @@ describe('Network Upgrades activation heights', () => {
                 wasabi: 2,
                 papyrus: 3,
                 iris: 4,
+                hop: 5,
             };
             const activationHeights = getCustomActivationHeights(activationHeightsDefinition);
 
@@ -46,6 +50,7 @@ describe('Network Upgrades activation heights', () => {
             expect(activationHeights.getActivationHeight(NetworkUpgrades.wasabi)).to.be.eq(activationHeightsDefinition.wasabi);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(activationHeightsDefinition.papyrus);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.iris)).to.be.eq(activationHeightsDefinition.iris);
+            expect(activationHeights.getActivationHeight(NetworkUpgrades.hop)).to.be.eq(activationHeightsDefinition.hop);
         });
     });
 });
@@ -61,7 +66,7 @@ describe('ERP federation details', () => {
                 '03776b1fd8f86da3c1db3d69699e8250a15877d286734ea9a6da8e9d8ad25d16c1',
                 '03ab0e2cd7ed158687fc13b88019990860cdb72b1f5777b58513312550ea1584bc'
             ]);
-            expect(erpDetails.getCsvValue()).to.be.eq('01F4');
+            expect(erpDetails.getCsvValue()).to.be.eq('f401');
         });
 
         it('Gets testnet erp federation details', () => {
@@ -71,7 +76,7 @@ describe('ERP federation details', () => {
                 '034db69f2112f4fb1bb6141bf6e2bd6631f0484d0bd95b16767902c9fe219d4a6f',
                 '0275562901dd8faae20de0a4166362a4f82188db77dbed4ca887422ea1ec185f14'
             ]);
-            expect(erpDetails.getCsvValue()).to.be.eq('CD50');
+            expect(erpDetails.getCsvValue()).to.be.eq('50cd00');
         });
 
         it('Gets mainnet erp federation details', () => {
@@ -82,7 +87,7 @@ describe('ERP federation details', () => {
                 '03cd3e383ec6e12719a6c69515e5559bcbe037d0aa24c187e1e26ce932e22ad7b3',
                 '02370a9838e4d15708ad14a104ee5606b36caaaaf739d833e67770ce9fd9b3ec80'
             ]);
-            expect(erpDetails.getCsvValue()).to.be.eq('CD50');
+            expect(erpDetails.getCsvValue()).to.be.eq('50cd00');
         });
     });
 
@@ -111,13 +116,16 @@ describe('Network settings', () => {
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.wasabi)).to.be.eq(0);
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(0);
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.iris)).to.be.eq(0);
+            expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.hop)).to.be.eq(0);
         });
     
         it('Gets testnet network settings', () => {
             const networkSettings = getNetworkSettingsForThisNetwork(NETWORKS.TESTNET);
+            expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.orchid)).to.be.eq(0);
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.wasabi)).to.be.eq(0);
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(863000);
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.iris)).to.be.eq(2060500);
+            expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.hop)).to.be.eq(3103000);
         });
     
         it('Gets mainnet network settings', () => {
@@ -126,6 +134,7 @@ describe('Network settings', () => {
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.wasabi)).to.be.eq(1591000);
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(2392700);
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.iris)).to.be.eq(3614800);
+            expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.hop)).to.be.eq(4598500);
         });
     });
 
@@ -139,7 +148,7 @@ describe('Network settings', () => {
                 '03776b1fd8f86da3c1db3d69699e8250a15877d286734ea9a6da8e9d8ad25d16c1',
                 '03ab0e2cd7ed158687fc13b88019990860cdb72b1f5777b58513312550ea1584bc'
             ]);
-            expect(networkSettings.getErpDetails().getCsvValue()).to.be.eq('01F4');
+            expect(networkSettings.getErpDetails().getCsvValue()).to.be.eq('f401');
         });
 
         it('Gets testnet erp federation details', () => {
@@ -149,7 +158,7 @@ describe('Network settings', () => {
                 '034db69f2112f4fb1bb6141bf6e2bd6631f0484d0bd95b16767902c9fe219d4a6f',
                 '0275562901dd8faae20de0a4166362a4f82188db77dbed4ca887422ea1ec185f14'
             ]);
-            expect(networkSettings.getErpDetails().getCsvValue()).to.be.eq('CD50');
+            expect(networkSettings.getErpDetails().getCsvValue()).to.be.eq('50cd00');
         });
 
         it('Gets mainnet erp federation details', () => {
@@ -160,7 +169,7 @@ describe('Network settings', () => {
                 '03cd3e383ec6e12719a6c69515e5559bcbe037d0aa24c187e1e26ce932e22ad7b3',
                 '02370a9838e4d15708ad14a104ee5606b36caaaaf739d833e67770ce9fd9b3ec80'
             ]);
-            expect(networkSettings.getErpDetails().getCsvValue()).to.be.eq('CD50');
+            expect(networkSettings.getErpDetails().getCsvValue()).to.be.eq('50cd00');
         });
     });
 });

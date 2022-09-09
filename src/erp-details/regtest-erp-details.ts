@@ -12,6 +12,6 @@ export class RegtestErpDetails implements ErpDetails {
   }
 
   getCsvValue(): string {
-    return '01F4'; // 500 in hexa
+    return 'f401'; // 500 in hexa, serialized as signed LE
   }
 }
