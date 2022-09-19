@@ -12,6 +12,8 @@ export class MainnetActivationHeights implements NetworkUpgradesActivationHeight
         return 2392700;
       case NetworkUpgrades.iris:
         return 3614800;
+      case NetworkUpgrades.hop:
+        return 4598500;
     }
   }
 }

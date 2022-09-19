@@ -13,6 +13,7 @@ describe('Network Upgrades activation heights', () => {
             expect(activationHeights.getActivationHeight(NetworkUpgrades.wasabi)).to.be.eq(0);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(0);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.iris)).to.be.eq(0);
+            expect(activationHeights.getActivationHeight(NetworkUpgrades.hop)).to.be.eq(0);
         });
 
         it('Gets testnet activation heights', () => {
@@ -21,6 +22,7 @@ describe('Network Upgrades activation heights', () => {
             expect(activationHeights.getActivationHeight(NetworkUpgrades.wasabi)).to.be.eq(0);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(863000);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.iris)).to.be.eq(2060500);
+            expect(activationHeights.getActivationHeight(NetworkUpgrades.hop)).to.be.eq(3103000);
         });
 
         it('Gets mainnet activation heights', () => {
@@ -29,6 +31,7 @@ describe('Network Upgrades activation heights', () => {
             expect(activationHeights.getActivationHeight(NetworkUpgrades.wasabi)).to.be.eq(1591000);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(2392700);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.iris)).to.be.eq(3614800);
+            expect(activationHeights.getActivationHeight(NetworkUpgrades.hop)).to.be.eq(4598500);
         });
     });
 
@@ -39,6 +42,7 @@ describe('Network Upgrades activation heights', () => {
                 wasabi: 2,
                 papyrus: 3,
                 iris: 4,
+                hop: 5,
             };
             const activationHeights = getCustomActivationHeights(activationHeightsDefinition);
 
@@ -46,6 +50,7 @@ describe('Network Upgrades activation heights', () => {
             expect(activationHeights.getActivationHeight(NetworkUpgrades.wasabi)).to.be.eq(activationHeightsDefinition.wasabi);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(activationHeightsDefinition.papyrus);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.iris)).to.be.eq(activationHeightsDefinition.iris);
+            expect(activationHeights.getActivationHeight(NetworkUpgrades.hop)).to.be.eq(activationHeightsDefinition.hop);
         });
     });
 });
