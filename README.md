@@ -37,6 +37,7 @@ node sample/sample.js
     wasabi: number,
     papyrus: number,
     iris: number,
+    hop: number,
 }
 ```
 
@@ -96,6 +97,7 @@ e.g.
         wasabi: 2,
         papyrus: 3,
         iris: 4,
+        hop: 5,
     };
     getCustomActivationHeights(activationConfig).getActivationHeight(NetworkUpgrades.papyrus) => 3
 ```
