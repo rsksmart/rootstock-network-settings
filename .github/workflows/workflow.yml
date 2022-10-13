@@ -20,4 +20,7 @@ jobs:
         run: npm install
 
       - name: Test 🚨
-        run: npm test
+        run: npm run test
+
+      - name: Analyze 🏗️
+        run: npm audit
