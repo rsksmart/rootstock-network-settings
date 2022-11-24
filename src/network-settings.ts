@@ -19,7 +19,11 @@ export class NetworkSettings {
     return this.network;
   }
 
-  constructor(_networkUpgradesActivationHeights: NetworkUpgradesActivationHeights, _erpDetails: ErpDetails, _network: NETWORKS) {
+  constructor(
+    _networkUpgradesActivationHeights: NetworkUpgradesActivationHeights,
+    _erpDetails: ErpDetails,
+    _network: NETWORKS,
+  ) {
     this.networkUpgradesActivationHeights = _networkUpgradesActivationHeights;
     this.erpDetails = _erpDetails;
     this.network = _network;

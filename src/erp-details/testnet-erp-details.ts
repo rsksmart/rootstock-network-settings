@@ -10,6 +10,6 @@ export class TestnetErpDetails implements ErpDetails {
   }
 
   getCsvValue(): number {
-    return 52560; // 50cd00 in signed LE 
+    return 52560; // 50cd00 in signed LE
   }
 }
