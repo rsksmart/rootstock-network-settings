@@ -172,4 +172,18 @@ describe('Network settings', () => {
             expect(networkSettings.getErpDetails().getCsvValue()).to.be.eq(52560);
         });
     });
+    describe('Get Network Name', () => {
+        it('Gets regtest network name', () => {
+            const networkSettings = getNetworkSettingsForThisNetwork(NETWORKS.REGTEST);
+            expect(networkSettings.getNetworkName()).to.be.eq('regtest');
+        });
+        it('Gets testnet network name', () => {
+            const networkSettings = getNetworkSettingsForThisNetwork(NETWORKS.TESTNET);
+            expect(networkSettings.getNetworkName()).to.be.eq('testnet');
+        });
+        it('Gets mainnet network name', () => {
+            const networkSettings = getNetworkSettingsForThisNetwork(NETWORKS.MAINNET);
+            expect(networkSettings.getNetworkName()).to.be.eq('mainnet');
+        });
+    });
 });
