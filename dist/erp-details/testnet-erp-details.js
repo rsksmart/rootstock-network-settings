@@ -10,7 +10,7 @@ class TestnetErpDetails {
         ];
     }
     getCsvValue() {
-        return '50cd00'; // 52,560 in hexa, serialized as signed LE
+        return 52560; // 50cd00 in signed LE 
     }
 }
 exports.TestnetErpDetails = TestnetErpDetails;

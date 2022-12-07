@@ -66,7 +66,7 @@ describe('ERP federation details', () => {
                 '03776b1fd8f86da3c1db3d69699e8250a15877d286734ea9a6da8e9d8ad25d16c1',
                 '03ab0e2cd7ed158687fc13b88019990860cdb72b1f5777b58513312550ea1584bc'
             ]);
-            expect(erpDetails.getCsvValue()).to.be.eq('f401');
+            expect(erpDetails.getCsvValue()).to.be.eq(500);
         });
 
         it('Gets testnet erp federation details', () => {
@@ -76,7 +76,7 @@ describe('ERP federation details', () => {
                 '034db69f2112f4fb1bb6141bf6e2bd6631f0484d0bd95b16767902c9fe219d4a6f',
                 '0275562901dd8faae20de0a4166362a4f82188db77dbed4ca887422ea1ec185f14'
             ]);
-            expect(erpDetails.getCsvValue()).to.be.eq('50cd00');
+            expect(erpDetails.getCsvValue()).to.be.eq(52560);
         });
 
         it('Gets mainnet erp federation details', () => {
@@ -87,7 +87,7 @@ describe('ERP federation details', () => {
                 '03cd3e383ec6e12719a6c69515e5559bcbe037d0aa24c187e1e26ce932e22ad7b3',
                 '02370a9838e4d15708ad14a104ee5606b36caaaaf739d833e67770ce9fd9b3ec80'
             ]);
-            expect(erpDetails.getCsvValue()).to.be.eq('50cd00');
+            expect(erpDetails.getCsvValue()).to.be.eq(52560);
         });
     });
 
@@ -98,7 +98,7 @@ describe('ERP federation details', () => {
                     '0x0',
                     '0x1'
                 ],
-                csvValue: '99'
+                csvValue: 99
             };
             const erpDetails = getCustomErpDetails(customErpDetails);
 
@@ -148,7 +148,7 @@ describe('Network settings', () => {
                 '03776b1fd8f86da3c1db3d69699e8250a15877d286734ea9a6da8e9d8ad25d16c1',
                 '03ab0e2cd7ed158687fc13b88019990860cdb72b1f5777b58513312550ea1584bc'
             ]);
-            expect(networkSettings.getErpDetails().getCsvValue()).to.be.eq('f401');
+            expect(networkSettings.getErpDetails().getCsvValue()).to.be.eq(500);
         });
 
         it('Gets testnet erp federation details', () => {
@@ -158,7 +158,7 @@ describe('Network settings', () => {
                 '034db69f2112f4fb1bb6141bf6e2bd6631f0484d0bd95b16767902c9fe219d4a6f',
                 '0275562901dd8faae20de0a4166362a4f82188db77dbed4ca887422ea1ec185f14'
             ]);
-            expect(networkSettings.getErpDetails().getCsvValue()).to.be.eq('50cd00');
+            expect(networkSettings.getErpDetails().getCsvValue()).to.be.eq(52560);
         });
 
         it('Gets mainnet erp federation details', () => {
@@ -169,7 +169,21 @@ describe('Network settings', () => {
                 '03cd3e383ec6e12719a6c69515e5559bcbe037d0aa24c187e1e26ce932e22ad7b3',
                 '02370a9838e4d15708ad14a104ee5606b36caaaaf739d833e67770ce9fd9b3ec80'
             ]);
-            expect(networkSettings.getErpDetails().getCsvValue()).to.be.eq('50cd00');
+            expect(networkSettings.getErpDetails().getCsvValue()).to.be.eq(52560);
+        });
+    });
+    describe('Get Network Name', () => {
+        it('Gets regtest network name', () => {
+            const networkSettings = getNetworkSettingsForThisNetwork(NETWORKS.REGTEST);
+            expect(networkSettings.getNetworkName()).to.be.eq('regtest');
+        });
+        it('Gets testnet network name', () => {
+            const networkSettings = getNetworkSettingsForThisNetwork(NETWORKS.TESTNET);
+            expect(networkSettings.getNetworkName()).to.be.eq('testnet');
+        });
+        it('Gets mainnet network name', () => {
+            const networkSettings = getNetworkSettingsForThisNetwork(NETWORKS.MAINNET);
+            expect(networkSettings.getNetworkName()).to.be.eq('mainnet');
         });
     });
 });

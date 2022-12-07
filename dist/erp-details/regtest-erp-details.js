@@ -12,7 +12,7 @@ class RegtestErpDetails {
         ];
     }
     getCsvValue() {
-        return 'f401'; // 500 in hexa, serialized as signed LE
+        return 500; // f401 in signed LE
     }
 }
 exports.RegtestErpDetails = RegtestErpDetails;

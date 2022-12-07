@@ -9,7 +9,7 @@ export class TestnetErpDetails implements ErpDetails {
     ];
   }
 
-  getCsvValue(): string {
-    return '50cd00'; // 52,560 in hexa, serialized as signed LE
+  getCsvValue(): number {
+    return 52560; // 50cd00 in signed LE
   }
 }

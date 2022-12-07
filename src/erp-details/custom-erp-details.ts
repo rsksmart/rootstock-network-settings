@@ -2,7 +2,7 @@ import { ErpDetails } from './erp-details';
 
 export type CustomDetails = {
   erpPublicKeys: Array<string>;
-  csvValue: string;
+  csvValue: number;
 };
 
 export class CustomErpDetails implements ErpDetails {
@@ -16,7 +16,7 @@ export class CustomErpDetails implements ErpDetails {
     return this.customDetails.erpPublicKeys;
   }
 
-  getCsvValue(): string {
+  getCsvValue(): number {
     return this.customDetails.csvValue;
   }
 }

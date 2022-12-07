@@ -45,5 +45,5 @@ export function getNetworkSettingsForThisNetwork(network: NETWORKS): NetworkSett
   const networkUpgradesActivationHeights = getActivationHeightsForThisNetwork(network);
   const erpDetails = getErpDetailsForThisNetwork(network);
 
-  return new NetworkSettings(networkUpgradesActivationHeights, erpDetails);
+  return new NetworkSettings(networkUpgradesActivationHeights, erpDetails, network);
 }

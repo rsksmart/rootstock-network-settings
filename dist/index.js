@@ -44,7 +44,7 @@ exports.getCustomErpDetails = getCustomErpDetails;
 function getNetworkSettingsForThisNetwork(network) {
     const networkUpgradesActivationHeights = getActivationHeightsForThisNetwork(network);
     const erpDetails = getErpDetailsForThisNetwork(network);
-    return new network_settings_1.NetworkSettings(networkUpgradesActivationHeights, erpDetails);
+    return new network_settings_1.NetworkSettings(networkUpgradesActivationHeights, erpDetails, network);
 }
 exports.getNetworkSettingsForThisNetwork = getNetworkSettingsForThisNetwork;
 //# sourceMappingURL=index.js.map
