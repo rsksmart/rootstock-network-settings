@@ -15,6 +15,8 @@ class MainnetActivationHeights {
                 return 3614800;
             case network_upgrades_1.NetworkUpgrades.hop:
                 return 4598500;
+            case network_upgrades_1.NetworkUpgrades.fingerroot:
+                return 5468000;
         }
     }
 }

@@ -15,6 +15,8 @@ class TestnetActivationHeights {
                 return 2060500;
             case network_upgrades_1.NetworkUpgrades.hop:
                 return 3103000;
+            case network_upgrades_1.NetworkUpgrades.fingerroot:
+                return 4015800;
         }
     }
 }

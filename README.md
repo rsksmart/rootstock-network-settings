@@ -10,7 +10,7 @@ This library exposes the Network settings for the different networks. This inclu
 
 ## Requirements
 
-As a regular npm library it requires node and npm.
+As a regular npm library it requires node and npm, LTS version.
 
 ## Usage
 
@@ -38,6 +38,7 @@ node sample/sample.js
     papyrus: number,
     iris: number,
     hop: number,
+    fingerroot: number
 }
 ```
 
@@ -98,6 +99,7 @@ e.g.
         papyrus: 3,
         iris: 4,
         hop: 5,
+        fingerroot: 6
     };
     getCustomActivationHeights(activationConfig).getActivationHeight(NetworkUpgrades.papyrus) => 3
 ```

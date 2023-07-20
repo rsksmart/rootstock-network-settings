@@ -3,5 +3,6 @@ export declare enum NetworkUpgrades {
     wasabi = "wasabi",
     papyrus = "papyrus",
     iris = "iris",
-    hop = "hop"
+    hop = "hop",
+    fingerroot = "fingerroot"
 }

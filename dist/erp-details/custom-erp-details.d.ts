@@ -1,5 +1,5 @@
 import { ErpDetails } from './erp-details';
-export declare type CustomDetails = {
+export type CustomDetails = {
     erpPublicKeys: Array<string>;
     csvValue: number;
 };

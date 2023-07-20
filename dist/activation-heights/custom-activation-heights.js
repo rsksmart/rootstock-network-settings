@@ -18,6 +18,8 @@ class CustomActivationHeights {
                 return this.activationHeights.iris;
             case network_upgrades_1.NetworkUpgrades.hop:
                 return this.activationHeights.hop;
+            case network_upgrades_1.NetworkUpgrades.fingerroot:
+                return this.activationHeights.fingerroot;
         }
     }
 }

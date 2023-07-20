@@ -8,5 +8,6 @@ var NetworkUpgrades;
     NetworkUpgrades["papyrus"] = "papyrus";
     NetworkUpgrades["iris"] = "iris";
     NetworkUpgrades["hop"] = "hop";
+    NetworkUpgrades["fingerroot"] = "fingerroot";
 })(NetworkUpgrades = exports.NetworkUpgrades || (exports.NetworkUpgrades = {}));
 //# sourceMappingURL=network-upgrades.js.map

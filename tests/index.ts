@@ -14,6 +14,7 @@ describe('Network Upgrades activation heights', () => {
             expect(activationHeights.getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(0);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.iris)).to.be.eq(0);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.hop)).to.be.eq(0);
+            expect(activationHeights.getActivationHeight(NetworkUpgrades.fingerroot)).to.be.eq(0);
         });
 
         it('Gets testnet activation heights', () => {
@@ -23,6 +24,7 @@ describe('Network Upgrades activation heights', () => {
             expect(activationHeights.getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(863000);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.iris)).to.be.eq(2060500);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.hop)).to.be.eq(3103000);
+            expect(activationHeights.getActivationHeight(NetworkUpgrades.fingerroot)).to.be.eq(4015800);
         });
 
         it('Gets mainnet activation heights', () => {
@@ -32,6 +34,7 @@ describe('Network Upgrades activation heights', () => {
             expect(activationHeights.getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(2392700);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.iris)).to.be.eq(3614800);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.hop)).to.be.eq(4598500);
+            expect(activationHeights.getActivationHeight(NetworkUpgrades.fingerroot)).to.be.eq(5468000);
         });
     });
 
@@ -43,6 +46,7 @@ describe('Network Upgrades activation heights', () => {
                 papyrus: 3,
                 iris: 4,
                 hop: 5,
+                fingerroot: 6
             };
             const activationHeights = getCustomActivationHeights(activationHeightsDefinition);
 
@@ -51,6 +55,7 @@ describe('Network Upgrades activation heights', () => {
             expect(activationHeights.getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(activationHeightsDefinition.papyrus);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.iris)).to.be.eq(activationHeightsDefinition.iris);
             expect(activationHeights.getActivationHeight(NetworkUpgrades.hop)).to.be.eq(activationHeightsDefinition.hop);
+            expect(activationHeights.getActivationHeight(NetworkUpgrades.fingerroot)).to.be.eq(activationHeightsDefinition.fingerroot);
         });
     });
 });
@@ -117,6 +122,7 @@ describe('Network settings', () => {
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(0);
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.iris)).to.be.eq(0);
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.hop)).to.be.eq(0);
+            expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.fingerroot)).to.be.eq(0);
         });
     
         it('Gets testnet network settings', () => {
@@ -126,6 +132,7 @@ describe('Network settings', () => {
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(863000);
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.iris)).to.be.eq(2060500);
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.hop)).to.be.eq(3103000);
+            expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.fingerroot)).to.be.eq(4015800);
         });
     
         it('Gets mainnet network settings', () => {
@@ -135,6 +142,7 @@ describe('Network settings', () => {
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.papyrus)).to.be.eq(2392700);
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.iris)).to.be.eq(3614800);
             expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.hop)).to.be.eq(4598500);
+            expect(networkSettings.getNetworkUpgradesActivationHeights().getActivationHeight(NetworkUpgrades.fingerroot)).to.be.eq(5468000);
         });
     });
 
