@@ -1,4 +1,5 @@
 [![CI/CD Using Github actions workflow](https://github.com/rsksmart/rsk-network-settings/actions/workflows/workflow.yml/badge.svg)](https://github.com/rsksmart/rsk-network-settings/actions/workflows/workflow.yml)
+[![CodeQL](https://github.com/rsksmart/rsk-network-settings/workflows/CodeQL/badge.svg)](https://github.com/rsksmart/rsk-network-settings/actions?query=workflow%3ACodeQL)
 
 # Disclaimer
 
