@@ -21,12 +21,9 @@ npm i
 npm run pack
 ```
 
-## Run Sample Code
+## Run sample code
 
-Once you do this you can use it as the sample shows in [here](samples/sample.js).
-```
-node sample/sample.js
-```
+There is a sample file included [here](samples/sample.ts).
 
 ## Details
 
@@ -49,7 +46,7 @@ node sample/sample.js
 {
     REGTEST,
     TESTNET,
-    MAINNET,
+    MAINNET
 }
 ```
 
