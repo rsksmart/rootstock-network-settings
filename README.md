@@ -21,7 +21,7 @@ npm i
 npm run pack
 ```
 
-## Run sample code
+## Sample code
 
 There is a sample file included [here](samples/sample.ts).
 
