@@ -14,6 +14,8 @@ export class MainnetActivationHeights implements NetworkUpgradesActivationHeight
         return 3614800;
       case NetworkUpgrades.hop:
         return 4598500;
+      case NetworkUpgrades.fingerroot:
+        return 5468000;
     }
   }
 }

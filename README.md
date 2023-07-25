@@ -1,4 +1,5 @@
 [![CI/CD Using Github actions workflow](https://github.com/rsksmart/rsk-network-settings/actions/workflows/workflow.yml/badge.svg)](https://github.com/rsksmart/rsk-network-settings/actions/workflows/workflow.yml)
+[![CodeQL](https://github.com/rsksmart/rsk-network-settings/workflows/CodeQL/badge.svg)](https://github.com/rsksmart/rsk-network-settings/actions?query=workflow%3ACodeQL)
 
 # Disclaimer
 
@@ -10,7 +11,7 @@ This library exposes the Network settings for the different networks. This inclu
 
 ## Requirements
 
-As a regular npm library it requires node and npm.
+As a regular npm library it requires node and npm, LTS version.
 
 ## Usage
 
@@ -20,12 +21,9 @@ npm i
 npm run pack
 ```
 
-## Run Sample Code
+## Sample code
 
-Once you do this you can use it as the sample shows in [here](samples/sample.js).
-```
-node sample/sample.js
-```
+There is a sample file included [here](samples/sample.ts).
 
 ## Details
 
@@ -38,6 +36,7 @@ node sample/sample.js
     papyrus: number,
     iris: number,
     hop: number,
+    fingerroot: number
 }
 ```
 
@@ -47,7 +46,7 @@ node sample/sample.js
 {
     REGTEST,
     TESTNET,
-    MAINNET,
+    MAINNET
 }
 ```
 
@@ -98,6 +97,7 @@ e.g.
         papyrus: 3,
         iris: 4,
         hop: 5,
+        fingerroot: 6
     };
     getCustomActivationHeights(activationConfig).getActivationHeight(NetworkUpgrades.papyrus) => 3
 ```

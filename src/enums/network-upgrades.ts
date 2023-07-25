@@ -4,4 +4,5 @@ export enum NetworkUpgrades {
   papyrus = 'papyrus',
   iris = 'iris',
   hop = 'hop',
+  fingerroot = 'fingerroot',
 }
