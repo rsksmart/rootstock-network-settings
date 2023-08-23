@@ -10,6 +10,10 @@ import { TestnetErpDetails } from './erp-details/testnet-erp-details';
 import { MainnetErpDetails } from './erp-details/mainnet-erp-details';
 import { CustomErpDetails, CustomDetails } from './erp-details/custom-erp-details';
 import { NetworkSettings } from './network-settings';
+import BridgeConstants from './bridge/bridge-constants';
+import BridgeMainnetConstants from './bridge/bridge-constants-mainnet';
+import BridgeTestnetConstants from './bridge/bridge-constants-testnet';
+import BridgeRegtestConstants from './bridge/bridge-constants-regtest';
 
 export function getActivationHeightsForThisNetwork(network: NETWORKS): NetworkUpgradesActivationHeights {
   switch (network) {
@@ -41,9 +45,22 @@ export function getCustomErpDetails(customDetails: CustomDetails): ErpDetails {
   return new CustomErpDetails(customDetails);
 }
 
+export function getBridgeConstantsForThisNetwork(network: NETWORKS): BridgeConstants {
+  switch (network) {
+    case NETWORKS.REGTEST:
+      return new BridgeRegtestConstants();
+    case NETWORKS.TESTNET:
+      return new BridgeTestnetConstants();
+    case NETWORKS.MAINNET:
+    default:
+      return new BridgeMainnetConstants();
+  }
+}
+
 export function getNetworkSettingsForThisNetwork(network: NETWORKS): NetworkSettings {
   const networkUpgradesActivationHeights = getActivationHeightsForThisNetwork(network);
   const erpDetails = getErpDetailsForThisNetwork(network);
+  const bridgeConstants = getBridgeConstantsForThisNetwork(network);
 
-  return new NetworkSettings(networkUpgradesActivationHeights, erpDetails, network);
+  return new NetworkSettings(networkUpgradesActivationHeights, erpDetails, bridgeConstants, network);
 }
